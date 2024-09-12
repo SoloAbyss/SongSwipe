@@ -23,7 +23,7 @@ slider.addEventListener('mouseup', ()=>{
     slider.style.cursor = 'grab'
 });
 
-window.addEventListener('mosueup', ()=>{
+window.addEventListener('mouseup', ()=>{
     pressed = false;
 });
 
@@ -33,5 +33,20 @@ slider.addEventListener('mousemove', (e)=>{
 
     x = e.offsetX
 
-    innerSlider.style.left = `${x - startx}px`
+    innerSlider.style.left = `${x - startx}px`;
+
+    checkboundary()
 });
+
+function checkboundary(){
+    let outer = slider.getBoundingClientRect();
+    let inner = innerSlider.getBoundingClientRect();
+
+    if(parseInt(innerSlider.style.left) > 0){
+        innerSlider.style.left = '0px';
+    }else if(inner.right < outer.right){
+        innerSlider.style.left = `-${inner.width - outer.width}px`
+    } 
+}
+
+checkboundary()
