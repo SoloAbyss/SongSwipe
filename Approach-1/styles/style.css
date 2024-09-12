@@ -17,7 +17,7 @@ body {
     .logo {
         width: 250px;
         height: auto;
-        margin-right: 600px;
+        margin-right: 200px;
     }
 
     .navbar {
@@ -27,9 +27,9 @@ body {
         margin-top: 20px;
     }
 
-    .filters {
+    .slider-inner {
         white-space: nowrap;
-        width: 822px;
+        width: 600px;
         overflow-x: hidden;
         margin-left: 20px;
         margin-right: 20px;
