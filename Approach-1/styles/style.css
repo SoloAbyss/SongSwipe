@@ -1,83 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Sofia Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: italic;
-    /* overflow: hidden; */
-    background-image: url(/Assets/Background.png);
-    background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    background-size: cover;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: "Sofia Sans", sans-serif;
 
-    .logo {
-        width: 250px;
-        height: auto;
-        margin-right: 200px;
-    }
+  font-style: italic;
+  background-image: url(/Assets/Background.png);
+  background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: cover;
+}
 
-    .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: left;
-        margin-top: 20px;
-    }
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distributes space between left, center, and right */
+  padding: 0 50px; /* Padding on sides */
+  height: 60px; /* Adjust height as needed */
+  margin-top: 20px;
+}
 
-    i {
-        color: white;
-        font-size: 3rem;
-        pointer-events: auto;
-        cursor: pointer;
-      }
-      
-    i:hover {
-        color: blueviolet;
-    }
-        
-    .slider {
-        position: absolute;
-        left: 10%;
-        top: 30%;
-        width: 80%;
-        height: 200px;
-        overflow: hidden;
-    }
-      
-      
-      
-    .slide-img {
-        height: 100%;
-        background-color: black;
-        text-align: center;
-        padding: 3rem;
-    }
+.logo img{
+  height: 50px;
+  user-select: none;
+}
 
-    .links {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .links a {
-        text-decoration: none;
-        color: white;
-        font-size: 16pt;
-        padding: 10px 16px;
-        margin-left: 10px;
-    }
+.slider {
+  position: relative;
+  top: 15%;
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+}
 
-    .profile-icon {
-        width: 20px;
-        height: auto;
-    }
+.slider-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: max-content;
+  display: flex;
+  gap: 10px;
+  pointer-events: none;
+  transition: 0s ease-in-out;
+}
 
-    .my-finds-icon {
-        width: 20px;
-        height: auto;
-        margin-left: 5px;
-    }
+.slide-img {
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding: 5px 10px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.slide-img a {
+  color: white;
+  font-size: 16pt;
+  cursor: pointer;
+  font-weight: bold; 
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16pt;
+  padding: 10px 16px;
+}
+
+.profile-icon {
+  width: 30px;
+  height: auto;
+}
+
+.my-finds-icon {
+  width: 30px;
+  height: auto;
+  margin-left: 5px;
+}
