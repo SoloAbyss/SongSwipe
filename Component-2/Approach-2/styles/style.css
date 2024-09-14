@@ -79,7 +79,7 @@ body {
   color: white;
   font-weight: bold;
   font-size: 16pt;
-  transition: all .2s ease-in-out;
+  transition: all .2s;
 }
 
 .links a:hover {
@@ -115,4 +115,106 @@ body {
   width: 30px;
   height: auto;
   margin-left: 10px;
+}
+
+/* ----Profile---- */
+
+.container {
+  margin-top: 80px;
+  margin-left: 20vw;
+  display: flex;
+  gap: 10px;
+  height: 60vh;
+  width: 80vw; 
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.vertical-nav {
+  background-color: rgb(255, 255, 255, 0.2);
+  color: white;
+  height: max-content;  /* Make it take up the full height of the container */
+  border-radius: 20px;
+  border: 4px solid rgb(255, 255, 255, 0.2);
+  padding-right: 40px;
+}
+
+.vertical-nav ul {
+  display: block;
+  list-style-type: none;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  padding: 0px 10px;
+  margin-bottom: 20px;
+}
+
+.profile ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 16pt;
+  margin: 0;
+}
+
+.username {
+  color: rgb(255, 255, 255, 0.5);
+  font-size: 12pt;
+  margin: 0;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 5px;
+} 
+
+.vertical-nav .nav-item {
+  height: fit-content;
+  padding: 5px 10px;
+  align-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 5px;
+  font-size: 16pt;
+  border: 4px solid rgb(255, 255, 255, 0);
+}
+
+.vertical-nav .nav-item:hover {
+  background-color: rgb(255, 255, 255, 0.2);
+
+}
+
+.vertical-nav .nav-item.active {
+  background-color: rgb(255, 255, 255, 0.2);
+  border: 4px solid rgb(255, 255, 255, 0.2);
+}
+
+/* Content Area Styles */
+.content-area {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: rgb(255, 255, 255, 0.2);
+  overflow-y: auto; /* Allows scrolling if content overflows */
+  border-radius: 20px;
+  border: 4px solid rgb(255, 255, 255, 0.2);
+  color: white;
+}
+
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
 }
