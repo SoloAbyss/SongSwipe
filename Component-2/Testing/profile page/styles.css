@@ -1,0 +1,53 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Vertical Navigation Styles */
+  .vertical-nav {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding-top: 20px;
+  }
+  
+  .vertical-nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .vertical-nav .nav-item {
+    padding: 15px;
+    cursor: pointer;
+  }
+  
+  .vertical-nav .nav-item:hover {
+    background-color: #575757;
+  }
+  
+  .vertical-nav .nav-item.active {
+    background-color: #444;
+  }
+  
+  /* Content Area Styles */
+  .content-area {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .content-section {
+    display: none;
+  }
+  
+  .content-section.active {
+    display: block;
+  }
+  
