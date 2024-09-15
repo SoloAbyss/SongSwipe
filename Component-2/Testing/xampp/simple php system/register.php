@@ -8,8 +8,8 @@
     <title>Register</title>
 </head>
 <body>
-      <div class="login-container">
-        <div class="login-box form-box">
+      <div class="container">
+        <div class="box form-box">
 
         <?php 
          
@@ -17,7 +17,7 @@
          if(isset($_POST['submit'])){
             $username = $_POST['username'];
             $email = $_POST['email'];
-            $name = $_POST['name'];
+            $age = $_POST['age'];
             $password = $_POST['password'];
 
          //verifying the unique email
@@ -26,18 +26,18 @@
 
          if(mysqli_num_rows($verify_query) !=0 ){
             echo "<div class='message'>
-                      <p>This email is already taken, please try another email.</p>
+                      <p>This email is used, Try another One Please!</p>
                   </div> <br>";
-            echo "<a href='javascript:self.history.back()'><button class='btn1'>Go Back</button>";
+            echo "<a href='javascript:self.history.back()'><button class='btn'>Go Back</button>";
          }
          else{
 
-            mysqli_query($con,"INSERT INTO users(Username,Email,Name,Password) VALUES('$username','$email','$name','$password')") or die("Erroe Occured");
+            mysqli_query($con,"INSERT INTO users(Username,Email,Age,Password) VALUES('$username','$email','$age','$password')") or die("Erroe Occured");
 
             echo "<div class='message'>
-                      <p>Registration successful!</p>
+                      <p>Registration successfully!</p>
                   </div> <br>";
-            echo "<a href='login.php'><button class='btn1'>Login Now</button>";
+            echo "<a href='index.php'><button class='btn'>Login Now</button>";
          
 
          }
@@ -59,8 +59,8 @@
                 </div>
 
                 <div class="field input">
-                    <label for="age">Full Name</label>
-                    <input type="text" name="name" id="name" autocomplete="off" required>
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" autocomplete="off" required>
                 </div>
                 <div class="field input">
                     <label for="password">Password</label>
@@ -71,8 +71,8 @@
                     
                     <input type="submit" class="btn" name="submit" value="Register" required>
                 </div>
-                <div class="small-links">
-                    Already a member? <a href="login.php">Sign In</a>
+                <div class="links">
+                    Already a member? <a href="index.php">Sign In</a>
                 </div>
             </form>
         </div>

@@ -3,7 +3,7 @@
 
    include("php/config.php");
    if(!isset($_SESSION['valid'])){
-    header("Location: login.php");
+    header("Location: index.php");
    }
 ?>
 <!DOCTYPE html>
@@ -16,35 +16,33 @@
     <title>Change Profile</title>
 </head>
 <body>
-    <div class="navbar">
+    <div class="nav">
         <div class="logo">
-            <a href="index.php"><img href="index.html" src="Assets/SongSwipe logo.svg" alt="navbar logo" /></a>
+            <p><a href="home.php"> Logo</a></p>
         </div>
-        <div class="links">
-            <a href="#myfinds">My Finds<img class="my-finds-icon-p" src="Assets/My Finds icon.svg"
-                    alt="My Finds icon" /></a>
-            <div class="divider"></div>
-            <a class="nav-active" href="#profile">Profile<img class="profile-icon-p" src="Assets/Profile Icon.svg"
-                    alt="Profile icon" /></a>
+
+        <div class="right-links">
+            <a href="#">Change Profile</a>
+            <a href="php/logout.php"> <button class="btn">Log Out</button> </a>
         </div>
     </div>
-    <div class="login-container">
-        <div class="login-box form-box">
+    <div class="container">
+        <div class="box form-box">
             <?php 
                if(isset($_POST['submit'])){
                 $username = $_POST['username'];
                 $email = $_POST['email'];
-                $name = $_POST['name'];
+                $age = $_POST['age'];
 
                 $id = $_SESSION['id'];
 
-                $edit_query = mysqli_query($con,"UPDATE users SET Username='$username', Email='$email', Name='$name' WHERE Id=$id ") or die("error occurred");
+                $edit_query = mysqli_query($con,"UPDATE users SET Username='$username', Email='$email', Age='$age' WHERE Id=$id ") or die("error occurred");
 
                 if($edit_query){
                     echo "<div class='message'>
                     <p>Profile Updated!</p>
                 </div> <br>";
-              echo "<a href='profile.php'><button class='btn1'>Go back to profile</button>";
+              echo "<a href='home.php'><button class='btn'>Go Home</button>";
        
                 }
                }else{
@@ -55,11 +53,11 @@
                 while($result = mysqli_fetch_assoc($query)){
                     $res_Uname = $result['Username'];
                     $res_Email = $result['Email'];
-                    $res_Name = $result['Name'];
+                    $res_Age = $result['Age'];
                 }
 
             ?>
-            <header>Edit Profile</header>
+            <header>Change Profile</header>
             <form action="" method="post">
                 <div class="field input">
                     <label for="username">Username</label>
@@ -72,13 +70,13 @@
                 </div>
 
                 <div class="field input">
-                    <label for="age">Full Name</label>
-                    <input type="text" name="name" id="name" value="<?php echo $res_Name; ?>" autocomplete="off" required>
+                    <label for="age">Age</label>
+                    <input type="number" name="age" id="age" value="<?php echo $res_Age; ?>" autocomplete="off" required>
                 </div>
                 
-                <div class="edit-field">
-                    <input type="submit" class="btn1" name="submit" value="Update" required>
-                    <a href="profile.php" class="btn2">Cancel</a>
+                <div class="field">
+                    
+                    <input type="submit" class="btn" name="submit" value="Update" required>
                 </div>
                 
             </form>

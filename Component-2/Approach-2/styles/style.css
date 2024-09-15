@@ -13,6 +13,8 @@ body {
   background-attachment: fixed;
 }
 
+/* ----Navbar - All Pages---- */
+
 .navbar {
   display: flex;
   align-items: center;
@@ -29,7 +31,7 @@ body {
 
 .slider {
   position: relative;
-  top: 15%;
+  top: 10%;
   width: 60%;
   height: 100%;
   overflow: hidden;
@@ -37,53 +39,74 @@ body {
 
 .slider-inner {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
   width: max-content;
   display: flex;
   gap: 10px;
   pointer-events: none;
-  transition: 0s ease-in-out;
 }
 
 .filter {
-  height: fit-content;
+  padding: 8px 13px;
   background-color: rgba(255, 255, 255, 0.2);
-  text-align: center;
-  padding: 5px 10px;
-  border: 3px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  flex-shrink: 0;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16pt;
   user-select: none;
 }
 
 .filter a {
   color: white;
   font-size: 16pt;
-  cursor: pointer;
-  font-weight: bold;
 }
 
 .links {
   display: flex;
-  text-align: center;
-  justify-content: center; /* For centering horizontally if needed */
-  align-items: center; /* Vertically center text and icons */
+  align-content: center;
 }
 
 .links a {
-  display: flex; /* Turn each link into a flex container */
-  align-items: center; /* Vertically center content within each link */
+  position: relative;
+  height: max-content;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: white;
   font-weight: bold;
   font-size: 16pt;
   transition: all .2s;
+  padding: 8px 15px;
+  border-radius: 12pt;
+}
+
+.links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  border: 4px solid rgba(255, 255, 255, 0);
+  transition: all 0.2s;
+}
+
+.nav-active::before {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.links a:hover::before {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-active {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+  margin: 0px 20px;
 }
 
 .links a:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+  margin: 0px 20px;
 }
 
 .divider {
@@ -91,27 +114,22 @@ body {
   width: 4px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 2px;
-  margin: 10px;
+  align-self: center;
+  margin: 0px 5px 0px 5px;
 }
 
 .my-finds-icon {
-  width: 30px;
-  height: auto;
+  width: auto;
+  height: 30px;
   margin-left: 10px;
 }
 
 .profile-icon {
-  width: 30px;
-  height: auto;
+  width: auto;
+  height: 30px;
 }
 
-.my-finds-icon-p {
-  width: 30px;
-  height: auto;
-  margin-left: 10px;
-}
-
-.profile-icon-p {
+.my-finds-icon-p, .profile-icon-p {
   width: 30px;
   height: auto;
   margin-left: 10px;
@@ -119,7 +137,7 @@ body {
 
 /* ----Profile---- */
 
-.container {
+.profile-container {
   margin-top: 80px;
   margin-left: 20vw;
   display: flex;
@@ -130,74 +148,72 @@ body {
   overflow: hidden;
 }
 
-.vertical-nav {
+.profile-nav {
   background-color: rgb(255, 255, 255, 0.2);
   color: white;
   height: max-content;  /* Make it take up the full height of the container */
   border-radius: 20px;
   border: 4px solid rgb(255, 255, 255, 0.2);
-  padding-right: 40px;
+  padding: 40px 40px 40px 0px;
 }
 
-.vertical-nav ul {
-  display: block;
+.profile-nav ul {
   list-style-type: none;
 }
 
-.profile {
+.profile-link {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 60px;
-  padding: 0px 10px;
-  margin-bottom: 20px;
+  padding: 0px 20px;
+
 }
 
-.profile ul {
+.profile-link ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.name {
-  font-weight: bold;
-  font-size: 16pt;
-  margin: 0;
-}
-
-.username {
-  color: rgb(255, 255, 255, 0.5);
-  font-size: 12pt;
-  margin: 0;
 }
 
 .profile-pic {
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  margin-right: 5px;
+  margin-right: 10px;
 } 
 
-.vertical-nav .nav-item {
+.profile-link .name {
+  font-weight: bold;
+  font-size: 20pt;
+  margin: 0;
+}
+
+.profile-link .username {
+  color: rgb(255, 255, 255, 0.5);
+  font-size: 14pt;
+  margin: 0;
+}
+
+.profile-nav .nav-link {
   height: fit-content;
   padding: 5px 10px;
   align-content: center;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 14pt;
   transition: all 0.2s ease-in-out;
   margin-bottom: 5px;
-  font-size: 16pt;
+  font-size: 20pt;
   border: 4px solid rgb(255, 255, 255, 0);
 }
 
-.vertical-nav .nav-item:hover {
+.profile-nav .nav-link:hover {
   background-color: rgb(255, 255, 255, 0.2);
 
 }
 
-.vertical-nav .nav-item.active {
-  background-color: rgb(255, 255, 255, 0.2);
-  border: 4px solid rgb(255, 255, 255, 0.2);
+.profile-nav .nav-link.active {
+  background-color: rgb(255, 255, 255, 0.1);
+  border: 4px solid rgb(255, 255, 255, 0.1);
 }
 
 /* Content Area Styles */

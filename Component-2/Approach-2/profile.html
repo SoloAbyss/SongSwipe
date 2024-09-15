@@ -1,3 +1,11 @@
+<?php 
+   session_start();
+
+   include("php/config.php");
+   if(!isset($_SESSION['valid'])){
+    header("Location: login.php");
+   }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,7 +32,7 @@
             alt="My Finds icon"
         /></a>
         <div class="divider"></div>
-        <a href="#profile"
+        <a class="nav-active" href="#profile"
           >Profile<img
             class="profile-icon-p"
             src="Assets/Profile Icon.svg"
@@ -33,25 +41,26 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="profile-container">
       <!-- Vertical Navigation Pane -->
-      <div class="vertical-nav">
+      <div class="profile-nav">
         <ul>
-          <div class="profile nav-item active" data-target="profile">
+          <div class="profile-link nav-link active" data-target="profile">
             <img
               class="profile-pic"
               src="Assets/profile.png"
               alt="Profile Photo"
             />
             <ul>
-              <li class="name">Maximus Abrahamse</li>
-              <li class="username">@SoloAbyss</li>
+              <li class="name"><b><?php echo $res_Name ?></b></li>
+              <li class="username">@<b><?php echo $res_Uname ?></b></li>
             </ul>
           </div>
-          <li class="nav-item" data-target="get-pro">Get Pro</li>
-          <li class="nav-item" data-target="history">History</li>
-          <li class="nav-item" data-target="my-details">My Details</li>
-          <li class="nav-item" data-target="settings">Settings</li>
+          <li class="nav-link" data-target="get-pro">Get Pro</li>
+          <li class="nav-link" data-target="history">History</li>
+          <li class="nav-link" data-target="my-details">My Details</li>
+          <li class="nav-link" data-target="settings">Settings</li>
+          <li href="php/logout.php"> <button class="nav-link logout">Log Out</button> </li>
         </ul>
       </div>
 
@@ -76,7 +85,22 @@
             <p>Name</p>
             <div class="detail-field">
                 <p>Maximus Abrahamse</p>
-                <a href="edit.php"> <button class="btn">Edit</button> </a>
+                
+                <?php 
+            
+                $id = $_SESSION['id'];
+                $query = mysqli_query($con,"SELECT*FROM users WHERE Id=$id");
+
+                while($result = mysqli_fetch_assoc($query)){
+                    $res_Uname = $result['Username'];
+                    $res_Email = $result['Email'];
+                    $res_Name = $result['Name'];
+                    $res_id = $result['Id'];
+                }
+                
+                echo "<a href='edit.php?Id=$res_id'>Edit profile</a>";
+                ?>
+
             </div>
           </div>
         </div>

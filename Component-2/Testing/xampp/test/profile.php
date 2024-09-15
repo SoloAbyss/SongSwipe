@@ -6,50 +6,62 @@ if (!isset($_SESSION['valid'])) {
     header("Location: login.php");
 }
 ?>
+
+<?php
+$id = $_SESSION['id'];
+$query = mysqli_query($con, "SELECT*FROM users WHERE Id=$id");
+
+while ($result = mysqli_fetch_assoc($query)) {
+    $res_Uname = $result['Username'];
+    $res_Email = $result['Email'];
+    $res_Name = $result['Name'];
+    $res_id = $result['Id'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>SongSwipe | Profile</title>
 </head>
 
 <body>
     <div class="navbar">
         <div class="logo">
-            <a href="index.html"><img href="index.html" src="Assets/SongSwipe logo.svg" alt="navbar logo" /></a>
+            <a href="index.php"><img href="index.html" src="Assets/SongSwipe logo.svg" alt="navbar logo" /></a>
         </div>
         <div class="links">
             <a href="#myfinds">My Finds<img class="my-finds-icon-p" src="Assets/My Finds icon.svg"
                     alt="My Finds icon" /></a>
             <div class="divider"></div>
-            <a href="#profile">Profile<img class="profile-icon-p" src="Assets/Profile Icon.svg"
+            <a class="nav-active" href="#profile">Profile<img class="profile-icon-p" src="Assets/Profile Icon.svg"
                     alt="Profile icon" /></a>
         </div>
     </div>
 
-    <div class="container">
-        <!-- Vertical Navigation Pane -->
-        <div class="vertical-nav">
+    <div class="profile-container">
+        <div class="profile-nav">
             <ul>
-                <div class="profile nav-item active" data-target="profile">
+                <div class="profile-link nav-link active" data-target="profile">
                     <img class="profile-pic" src="Assets/profile.png" alt="Profile Photo" />
                     <ul>
-                        <li class="name">Maximus Abrahamse</li>
-                        <li class="username">@SoloAbyss</li>
+                        <li class="name"><b><?php echo $res_Name ?></b></li>
+                        <li class="username">@<b><?php echo $res_Uname ?></b></li>
                     </ul>
                 </div>
-                <li class="nav-item" data-target="get-pro">Get Pro</li>
-                <li class="nav-item" data-target="history">History</li>
-                <li class="nav-item" data-target="my-details">My Details</li>
-                <li class="nav-item" data-target="settings">Settings</li>
+                <li class="nav-link" data-target="get-pro">Get Pro</li>
+                <li class="nav-link" data-target="history">History</li>
+                <li class="nav-link" data-target="my-details">My Details</li>
+                <li class="nav-link" data-target="settings">Settings</li>
+                <li>
+                    <a href="php/logout.php"><button class="logout">Log Out</button></a>
+                </li>
             </ul>
         </div>
 
-        <!-- Content Section -->
         <div class="content-area">
             <div id="profile" class="content-section active">
                 <h1>Profile</h1>
@@ -65,14 +77,30 @@ if (!isset($_SESSION['valid'])) {
             </div>
             <div id="my-details" class="content-section">
                 <h1>My Details</h1>
-                <p>Manage your personal information.</p>
-                <div class="name">
-                    <p>Name</p>
-                    <div class="detail-field">
-                        <p>Maximus Abrahamse</p>
-                        <a href="edit.php"> <button class="btn">Edit</button> </a>
+                <p class="subheading">Manage your personal information.</p>
+                <div class="details-container">
+                    <div class="top-details">
+                        <div class="detail-box detail-box">
+                            <!-- Content for the left box (e.g., Name) -->
+                            <h2>Name</h2>
+                            <p><b><?php echo $res_Name ?></p>
+                        </div>
+                        <div class="detail-box detail-box-right">
+                            <!-- Content for the right box (e.g., Username) -->
+                            <h2>Username</h2>
+                            <p><b><?php echo $res_Uname ?></b></p>
+                        </div>
+                    </div>
+
+                    <div class="bottom-details">
+                        <!-- Content for the bottom box (e.g., Email) -->
+                        <h2>Email</h2>
+                        <p> <b><?php echo $res_Email ?></p>
                     </div>
                 </div>
+                <?php
+                    echo "<a href='edit.php?Id=$res_id' class='btn-edit-profile'>Edit profile</a>";
+                ?>
             </div>
             <div id="settings" class="content-section">
                 <h1>Settings</h1>
@@ -81,55 +109,6 @@ if (!isset($_SESSION['valid'])) {
         </div>
     </div>
     <script src="script-profile.js"></script>
-
-
-
-    <div class="nav">
-        <div class="logo">
-            <p><a href="home.php">Logo</a> </p>
-        </div>
-
-        <div class="right-links">
-
-            <?php
-
-            $id = $_SESSION['id'];
-            $query = mysqli_query($con, "SELECT*FROM users WHERE Id=$id");
-
-            while ($result = mysqli_fetch_assoc($query)) {
-                $res_Uname = $result['Username'];
-                $res_Email = $result['Email'];
-                $res_Name = $result['Name'];
-                $res_id = $result['Id'];
-            }
-
-            echo "<a href='edit.php?Id=$res_id'>Edit profile</a>";
-            ?>
-
-            <a href="php/logout.php"> <button class="btn">Log Out</button> </a>
-
-        </div>
-    </div>
-    <main>
-
-        <div class="main-box top">
-            <div class="top">
-                <div class="box">
-                    <b><?php echo $res_Name ?></b>
-                    <p>@<b><?php echo $res_Uname ?></b></p>
-                </div>
-                <div class="box">
-                    <p>Your email is <b><?php echo $res_Email ?></b>.</p>
-                </div>
-            </div>
-            <div class="bottom">
-                <div class="box">
-                    <p><b><?php echo $res_Name ?></b></p>
-                </div>
-            </div>
-        </div>
-
-    </main>
 </body>
 
 </html>

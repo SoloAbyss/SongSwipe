@@ -11,8 +11,8 @@
     <title>Login</title>
 </head>
 <body>
-      <div class="login-container">
-        <div class="login-box form-box">
+      <div class="container">
+        <div class="box form-box">
             <?php 
              
               include("php/config.php");
@@ -26,24 +26,23 @@
                 if(is_array($row) && !empty($row)){
                     $_SESSION['valid'] = $row['Email'];
                     $_SESSION['username'] = $row['Username'];
-                    $_SESSION['name'] = $row['Name'];
+                    $_SESSION['age'] = $row['Age'];
                     $_SESSION['id'] = $row['Id'];
                 }else{
                     echo "<div class='message'>
-                      <p>Wrong Email or Password</p>
+                      <p>Wrong Username or Password</p>
                        </div> <br>";
-                   echo "<a href='login.php'><button class='btn1'>Try again</button>";
+                   echo "<a href='index.php'><button class='btn'>Go Back</button>";
          
                 }
                 if(isset($_SESSION['valid'])){
-                    header("Location: profile.php");
+                    header("Location: home.php");
                 }
               }else{
 
             
             ?>
-            <header>Welcome Back!</header>
-            <h1 class="">Please login to SongSwipe</h1>
+            <header>Login</header>
             <form action="" method="post">
                 <div class="field input">
                     <label for="email">Email</label>
@@ -57,9 +56,9 @@
 
                 <div class="field">
                     
-                    <input type="submit" class="btn1" name="submit" value="Login" required>
+                    <input type="submit" class="btn" name="submit" value="Login" required>
                 </div>
-                <div class="small-links">
+                <div class="links">
                     Don't have account? <a href="register.php">Sign Up Now</a>
                 </div>
             </form>
