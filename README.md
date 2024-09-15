@@ -4,7 +4,7 @@ SongSwipe is a web-based application designed to help users discover new music. 
 1. Install ***XAMPP*** from here: https://www.apachefriends.org/download.html
 2. Open *'XAMPP Control Panel'*.
 3. Start the *'Apache'* and *'MySQL'* servers.
-4. Go to *'localhost/phpmyadmin'*
+4. Go to *'http://localhost/phpmyadmin'*
 5. Click *'New'* on the left hand side of the page
 6. Name the database *'tutorial'*
 7. Copy and paste the *'SYL'* script from the *'syl'* folder
