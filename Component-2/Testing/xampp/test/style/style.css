@@ -272,8 +272,10 @@ body {
 /* ----Profile---- */
 
 .profile-container {
-  margin-top: 80px;
-  margin-left: 20vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   gap: 10px;
   height: 60vh;

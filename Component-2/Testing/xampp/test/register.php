@@ -69,7 +69,7 @@
 
                 <div class="field">
                     
-                    <input type="submit" class="btn" name="submit" value="Register" required>
+                    <input type="submit" class="btn1" name="submit" value="Register" required>
                 </div>
                 <div class="small-links">
                     Already a member? <a href="login.php">Sign In</a>
