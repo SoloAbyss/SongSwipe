@@ -1,6 +1,6 @@
 let iteration = 0;
 
-gsap.set('.cards li', {
+gsap.set('.songs li', {
 	yPercent: 0,
 	opacity: 0,
 	scale: 0,
@@ -9,7 +9,7 @@ gsap.set('.cards li', {
 
 const spacing = 0.1,
 	snapTime = gsap.utils.snap(spacing),
-	cards = gsap.utils.toArray('.cards li'),
+	songs = gsap.utils.toArray('.songs li'),
 	animateFunc = element => {
 		const tl = gsap.timeline();
 		tl.fromTo(element, {
@@ -35,7 +35,7 @@ const spacing = 0.1,
 			}, 0);
 		return tl;
 	},
-	seamlessLoop = buildSeamlessLoop(cards, spacing, animateFunc),
+	seamlessLoop = buildSeamlessLoop(songs, spacing, animateFunc),
 	playhead = {
 		offset: 0
 	}, 
@@ -63,7 +63,7 @@ const spacing = 0.1,
 			}
 		},
 		end: "+=3000",
-		pin: ".gallery"
+		pin: ".media-carousel"
 	}),
 	
 	progressToScroll = progress => gsap.utils.clamp(1, trigger.end - 1, gsap.utils.wrap(0, 1, progress) * trigger.end),
@@ -120,8 +120,8 @@ items.concat(items).concat(items).forEach((item, i) => {
 	return seamlessLoop;
 }
 
-let slider = document.querySelector('.slider');
-let innerSlider = document.querySelector('.slider-inner');
+let slider = document.querySelector('.filter-container');
+let innerSlider = document.querySelector('.filter-inner');
 
 let pressed = false;
 let startx;

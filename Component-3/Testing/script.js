@@ -1,63 +1,15 @@
-let slider = document.querySelector('.slider');
-let innerSlider = document.querySelector('.slider-inner');
-
-let pressed = false;
-let startx;
-let x;
-
-slider.addEventListener('mousedown', (e)=>{
-    pressed = true;
-    startx = e.offsetX - innerSlider.offsetLeft;
-    slider.style.cursor = 'grabbing'
-});
-
-slider.addEventListener('mouseenter', ()=>{
-    slider.style.cursor = 'grab'
-});
-
-slider.addEventListener('mouseup', ()=>{
-    slider.style.cursor = 'grab'
-});
-
-window.addEventListener('mouseup', ()=>{
-    pressed = false;
-});
-
-slider.addEventListener('mousemove', (e)=>{
-    if(!pressed) return;
-    e.preventDefault();
-
-    x = e.offsetX
-
-    innerSlider.style.left = `${x - startx}px`;
-
-    checkboundary()
-});
-
-function checkboundary(){
-    let outer = slider.getBoundingClientRect();
-    let inner = innerSlider.getBoundingClientRect();
-
-    if(parseInt(innerSlider.style.left) > 0){
-        innerSlider.style.left = '0px';
-    }else if(inner.right < outer.right){
-        innerSlider.style.left = `-${inner.width - outer.width}px`
-    } 
-}
-
-checkboundary()
-
 let iteration = 0;
 
-gsap.set('.cards li', {
+gsap.set('.songs li', {
 	yPercent: 0,
 	opacity: 0,
-	scale: 0
+	scale: 0,
+	xPercent: 0
 });
 
 const spacing = 0.1,
 	snapTime = gsap.utils.snap(spacing),
-	cards = gsap.utils.toArray('.cards li'),
+	songs = gsap.utils.toArray('.songs li'),
 	animateFunc = element => {
 		const tl = gsap.timeline();
 		tl.fromTo(element, {
@@ -66,7 +18,7 @@ const spacing = 0.1,
 			}, {
 				scale: 1,
 				opacity: 1,
-				zIndex: 100,
+				zIndex: 1,
 				duration: 0.5,
 				yoyo: true,
 				repeat: 1,
@@ -74,16 +26,16 @@ const spacing = 0.1,
 				immediateRender: false
 			})
 			.fromTo(element, {
-				yPercent: 310 * 2
+				yPercent: 750 * 2
 			}, {
-				yPercent: -310 * 2,
+				yPercent: -750 * 2,
 				duration: 1,
 				ease: "none",
 				immediateRender: false
 			}, 0);
 		return tl;
 	},
-	seamlessLoop = buildSeamlessLoop(cards, spacing, animateFunc),
+	seamlessLoop = buildSeamlessLoop(songs, spacing, animateFunc),
 	playhead = {
 		offset: 0
 	}, 
@@ -99,9 +51,6 @@ const spacing = 0.1,
 	}),
 	trigger = ScrollTrigger.create({
 		start: 0,
-		end: "+=3000", // This should be adjusted based on the height of your content
-    	pin: ".gallery",
-    	pinSpacing: false, // Add this to prevent extra space from being added when the gallery is pinned
 		onUpdate(self) {
 			let scroll = self.scroll();
 			if (scroll > self.end - 1) {
@@ -114,7 +63,7 @@ const spacing = 0.1,
 			}
 		},
 		end: "+=3000",
-		pin: ".gallery"
+		pin: ".media-carousel"
 	}),
 	
 	progressToScroll = progress => gsap.utils.clamp(1, trigger.end - 1, gsap.utils.wrap(0, 1, progress) * trigger.end),
@@ -171,7 +120,51 @@ items.concat(items).concat(items).forEach((item, i) => {
 	return seamlessLoop;
 }
 
+let slider = document.querySelector('.filter-container');
+let innerSlider = document.querySelector('.filter-inner');
 
+let pressed = false;
+let startx;
+let x;
 
+slider.addEventListener('mousedown', (e)=>{
+    pressed = true;
+    startx = e.offsetX - innerSlider.offsetLeft;
+    slider.style.cursor = 'grabbing'
+});
 
+slider.addEventListener('mouseenter', ()=>{
+    slider.style.cursor = 'grab'
+});
 
+slider.addEventListener('mouseup', ()=>{
+    slider.style.cursor = 'grab'
+});
+
+window.addEventListener('mouseup', ()=>{
+    pressed = false;
+});
+
+slider.addEventListener('mousemove', (e)=>{
+    if(!pressed) return;
+    e.preventDefault();
+
+    x = e.offsetX
+
+    innerSlider.style.left = `${x - startx}px`;
+
+    checkboundary()
+});
+
+function checkboundary(){
+    let outer = slider.getBoundingClientRect();
+    let inner = innerSlider.getBoundingClientRect();
+
+    if(parseInt(innerSlider.style.left) > 0){
+        innerSlider.style.left = '0px';
+    }else if(inner.right < outer.right){
+        innerSlider.style.left = `-${inner.width - outer.width}px`
+    } 
+}
+
+checkboundary()

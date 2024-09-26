@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
-    <title>Home | SongSwipe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
     <div class="navbar">
         <div class="logo">
             <img href="php/logout.php" src="Assets/SongSwipe logo.svg" alt="navbar logo">
         </div>
-        <div class="slider">
-            <div class="slider-inner">
+        <div class="filter-container">
+            <div class="filter-inner">
                 <div class="filter">
                     <a>Pop</a>
                 </div>
@@ -88,50 +89,28 @@
         </div>
         
     </div>
-    
-    <div class="gallery">
-        <ul class="cards">
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            <li><img src="Assets\landscape-placeholder.svg" alt=""></li>
-            
+   
+    <div class="media-carousel">
+        <ul class="songs">
+            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
+            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
+            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
+            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
+            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
+            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
+            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
+            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
+            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
+            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
+            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
+            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
+            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
+            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
+            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
         </ul>
         <div class="actions">
-            <button class="prev">Prev</button>
-            <button class="next">Next</button>
+            <button class="prev"><i class="fa-solid fa-circle-up"></i></button>
+            <button class="next"><i class="fa-solid fa-circle-down"></i></button>
         </div>
     </div>
     <div class="drag-proxy"></div>
