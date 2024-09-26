@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body id="home">
-    <div class="navbar">
+    <div class="navbar-home">
         <div class="logo">
             <img href="php/logout.php" src="Assets/SongSwipe logo.svg" alt="navbar logo">
         </div>
@@ -92,14 +92,14 @@
    
     <div class="media-carousel">
         <ul class="songs">
-            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Buddy Holly<p>Weezer</p></li>
-            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
-            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
-            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
-            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
-            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
-            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
-            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
+            <li><img src="Assets/Weezer album.jpg" alt="Album art">Buddy Holly<p>Weezer</p></li>
+            <li><img src="Assets/Weezer album.jpg" alt="Album art">Test Song<p>Weezer</p></li>
+            <li><img src="Assets/Weezer album.jpg" alt="Album art">Test Song<p>Weezer</p></li>
+            <li><img src="Assets/Weezer album.jpg" alt="Album art">Test Song<p>Weezer</p></li>
+            <li><img src="Assets/Weezer album.jpg" alt="Album art">Test Song<p>Weezer</p></li>
+            <li><img src="Assets/Weezer album.jpg" alt="Album art">Test Song<p>Weezer</p></li>
+            <li><img src="Assets/Weezer album.jpg" alt="Album art">Test Song<p>Weezer</p></li>
+            <li><img src="Assets/Weezer album.jpg" alt="Album art">Test Song<p>Weezer</p></li>
         </ul>
         <div class="actions">
             <div class="top">

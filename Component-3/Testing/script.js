@@ -125,45 +125,94 @@ let innerSlider = document.querySelector('.filter-inner');
 let pressed = false;
 let startx;
 let x;
+let velocity = 0;
+let animationFrameId;
 
-slider.addEventListener('mousedown', (e)=>{
+let lastMousePosition;
+let lastTimestamp;
+
+slider.addEventListener('mousedown', (e) => {
     pressed = true;
     startx = e.offsetX - innerSlider.offsetLeft;
-    slider.style.cursor = 'grabbing'
+    slider.style.cursor = 'grabbing';
+    
+    cancelAnimationFrame(animationFrameId);  // Stop any ongoing inertia
+    lastMousePosition = e.offsetX;  // Store the initial mouse position
+    lastTimestamp = Date.now();     // Store the timestamp for velocity calculation
 });
 
-slider.addEventListener('mouseenter', ()=>{
-    slider.style.cursor = 'grab'
+slider.addEventListener('mouseenter', () => {
+    slider.style.cursor = 'grab';
 });
 
-slider.addEventListener('mouseup', ()=>{
-    slider.style.cursor = 'grab'
+slider.addEventListener('mouseup', () => {
+    slider.style.cursor = 'grab';
 });
 
-window.addEventListener('mouseup', ()=>{
-    pressed = false;
+window.addEventListener('mouseup', () => {
+    if (pressed) {
+        pressed = false;
+        // Start the inertia when the mouse is released
+        requestInertia();
+    }
 });
 
-slider.addEventListener('mousemove', (e)=>{
-    if(!pressed) return;
+slider.addEventListener('mousemove', (e) => {
+    if (!pressed) return;
     e.preventDefault();
 
-    x = e.offsetX
+    x = e.offsetX;
+    let newLeft = x - startx;
 
-    innerSlider.style.left = `${x - startx}px`;
+    innerSlider.style.left = `${newLeft}px`;
 
-    checkboundary()
+    // Calculate velocity
+    let currentTimestamp = Date.now();
+    let timeDiff = currentTimestamp - lastTimestamp;
+    let mouseMovement = e.offsetX - lastMousePosition;
+    velocity = mouseMovement / timeDiff;  // Velocity = distance / time
+
+    // Store current position and timestamp for the next calculation
+    lastMousePosition = e.offsetX;
+    lastTimestamp = currentTimestamp;
+
+    checkboundary();
 });
 
-function checkboundary(){
+function checkboundary() {
     let outer = slider.getBoundingClientRect();
     let inner = innerSlider.getBoundingClientRect();
 
-    if(parseInt(innerSlider.style.left) > 0){
+    if (parseInt(innerSlider.style.left) > 0) {
         innerSlider.style.left = '0px';
-    }else if(inner.right < outer.right){
-        innerSlider.style.left = `-${inner.width - outer.width}px`
-    } 
+    } else if (inner.right < outer.right) {
+        innerSlider.style.left = `-${inner.width - outer.width}px`;
+    }
 }
 
-checkboundary()
+// Function to animate the inertia after mouse release
+function requestInertia() {
+    const friction = 0.9;  // A friction value less than 1 to slow down the slider over time
+
+    function inertia() {
+        if (Math.abs(velocity) > 0.01) {  // Minimum threshold to stop animation
+            // Move the slider by the current velocity
+            innerSlider.style.left = `${parseInt(innerSlider.style.left) + velocity * 10}px`;
+
+            // Apply friction to reduce velocity
+            velocity *= friction;
+
+            checkboundary();  // Ensure boundaries are respected
+
+            // Continue the animation
+            animationFrameId = requestAnimationFrame(inertia);
+        } else {
+            cancelAnimationFrame(animationFrameId);
+        }
+    }
+
+    // Start the inertia animation
+    inertia();
+}
+
+checkboundary();
