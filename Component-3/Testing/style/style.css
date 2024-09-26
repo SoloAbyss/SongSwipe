@@ -16,17 +16,15 @@ body {
   background-attachment: fixed;
 }
 
-/* .center-horizontal {
-  display: flex;
-  width: 50%;
-  margin: auto;
+#home {
+  overflow: hidden;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+.header {
+  font-size: 40px;
+  font-weight: 800;
+  color: white;
+}
 
 /* ----Navbar---- */
 
@@ -34,13 +32,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 60px 50px 50px 50px;
   height: 60px;
-  margin-top: 20px;
   position: fixed;
   top: 0;
   z-index: 1000;
   width: 100%;
+  backdrop-filter: blur(20px);
 }
 
 .logo img {
@@ -159,20 +157,23 @@ body {
 
 .media-carousel {
   display: flex;
+  justify-content: center;
   flex-direction: row;
-  gap: 5px;
   margin: auto;
-  width: 50%;
-  height: 780px;
-  top: 100px;
-  /* overflow: hidden; */
+  width: fit-content;
+  height: max-content;
+  top: 120px;
+  position: relative;
+  overflow: hidden;
 }
 
 .songs {
   position: relative;
-  /* width: max-content; */
+  width: 700px;
+  height: 770px;
+  padding: 0;
+  margin: 0;
   top: 5px;
-  /* overflow: hidden; */
 }
 
 .songs li {
@@ -181,36 +182,51 @@ body {
   top: 0;
   left: 0;
   font-size: 30px;
-  width: 750px;
-  height: 750px;
-  margin: 0;
+  font-weight: 800;
+  width: 700px;
+  height: 700px;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .songs li img {
-  width: 710px;
-  height: 710px;
+  width: 700px;
+  height: 700px;
   border-radius: 30px;
+  border: 4px solid rgb(255, 255, 255, 0.1);
 }
 
 .songs li p {
-  width: 710px;
-  height: 710px;
-  border-radius: 30px;
-  font-size: 20px;
+  font-size: 25px;
+  font-weight: 600;
   margin-top: 0px;
+  color: rgb(255, 255, 255, 0.5);
+  white-space: normal; /* Allow text to break */
+  line-height: 1; /* Adjust line height if needed */
 }
 
 .actions {
   display: flex;
-  position: absolute;
   flex-direction: column;
+  justify-content: space-between;
   height: 100%;
-  left: 98%;
+  margin-left: 15px; /* Keeps a constant 5px gap from the songs */
+  position: relative;
   top: 5px;
 }
 
-button {
+.top, .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bottom {
+  margin-bottom: 60px;
+}
+
+.action-btn {
   outline: none;
   border: none;
   font-size: 50px;
@@ -218,9 +234,22 @@ button {
   cursor: pointer;
 }
 
-button i {
+.action-btn i {
   color: white;
 }
+
+.action-btn {
+  outline: none;
+  border: none;
+  font-size: 50px;
+  background: none;
+  cursor: pointer;
+}
+
+.action-btn i {
+  color: white;
+}
+
 
 /* ----Login System---- */
 
@@ -425,6 +454,10 @@ button i {
   border: 4px solid rgb(255, 255, 255, 0);
 }
 
+.nav-link i {
+  margin-right: 10px;
+}
+
 .profile-nav .nav-link:hover {
   background-color: rgb(255, 255, 255, 0.2);
 }
@@ -523,54 +556,70 @@ button i {
   display: block;
 }
 
-* {
-  box-sizing: border-box;
-}
+/* ----MyFinds---- */
 
-body {
-  overflow: hidden;
-}
-
-.gallery {
+.myfinds-container {
   position: absolute;
+  top: 150px;
   width: 100%;
-  height: 80%;
   overflow: hidden;
-  z-index: 10;
 }
 
-.cards {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.myfinds-container h1 {
+  width: 80%;
+  margin: auto;
 }
 
-.cards li {
-  list-style: none;
-  padding: 80px;
-  margin: 80px;
-  width: 500px;
-  height: 500px;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 0.8rem;
-  margin-top: 80px;
+.myfinds {
+  color: rgb(255, 255, 255, 0.5);
+  font-weight: 400;
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  top: 100px;
+  max-height: 800px;
+  overflow: hidden;
 }
 
-.actions {
-  position: absolute;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
+.myfinds, th, td {
+  padding: 10px 0px;
 }
 
-button {
-  display: inline-block;
-  outline: none;
-  border: none;
-  padding: 8px 14px;
-  background: #fff;
+
+.myfinds th {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(255, 255, 255, 0.5);
+
+}
+
+.myfinds td h2{
+  text-align: left;
+  font-size: 22px;
+  font-weight: 400;
+  color: white;
+
+}
+
+.myfinds td p{
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(255, 255, 255, 0.5);
+
+}
+
+.myfinds .title {
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.myfinds img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 10px;
 }

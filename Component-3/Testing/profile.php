@@ -25,6 +25,7 @@ while ($result = mysqli_fetch_assoc($query)) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <title>SongSwipe | Profile</title>
 </head>
 
@@ -34,7 +35,7 @@ while ($result = mysqli_fetch_assoc($query)) {
             <a href="index.php"><img href="index.html" src="Assets/SongSwipe logo.svg" alt="navbar logo" /></a>
         </div>
         <div class="links">
-            <a href="#myfinds">My Finds<img class="my-finds-icon-p" src="Assets/My Finds icon.svg"
+            <a href="myfinds.php">My Finds<img class="my-finds-icon-p" src="Assets/My Finds icon.svg"
                     alt="My Finds icon" /></a>
             <div class="divider"></div>
             <a class="nav-active" href="#profile">Profile<img class="profile-icon-p" src="Assets/Profile Icon.svg"
@@ -52,10 +53,10 @@ while ($result = mysqli_fetch_assoc($query)) {
                         <li class="username">@<b><?php echo $res_Uname ?></b></li>
                     </ul>
                 </div>
-                <li class="nav-link" data-target="get-pro">Get Pro</li>
-                <li class="nav-link" data-target="history">History</li>
-                <li class="nav-link" data-target="my-details">My Details</li>
-                <li class="nav-link" data-target="settings">Settings</li>
+                <li class="nav-link" data-target="get-pro"><i class="fa-solid fa-bolt" style="color: #ffaa01;"></i>Get Pro</li>
+                <li class="nav-link" data-target="history"><i class="fa-solid fa-clock-rotate-left"></i>History</li>
+                <li class="nav-link" data-target="my-details"><i class="fa-regular fa-pen-to-square"></i>My Details</li>
+                <li class="nav-link" data-target="settings"><i class="fa-solid fa-gear"></i>Settings</li>
                 <li>
                     <a href="php/logout.php"><button class="logout">Log Out</button></a>
                 </li>

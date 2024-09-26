@@ -4,7 +4,6 @@ gsap.set('.songs li', {
 	yPercent: 0,
 	opacity: 0,
 	scale: 0,
-	xPercent: 0
 });
 
 const spacing = 0.1,
@@ -18,7 +17,7 @@ const spacing = 0.1,
 			}, {
 				scale: 1,
 				opacity: 1,
-				zIndex: 1,
+				zIndex: 100,
 				duration: 0.5,
 				yoyo: true,
 				repeat: 1,
@@ -26,9 +25,9 @@ const spacing = 0.1,
 				immediateRender: false
 			})
 			.fromTo(element, {
-				yPercent: 750 * 2
+				yPercent: 280 * 2
 			}, {
-				yPercent: -750 * 2,
+				yPercent: -280 * 2,
 				duration: 1,
 				ease: "none",
 				immediateRender: false

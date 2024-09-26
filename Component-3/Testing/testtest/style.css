@@ -138,20 +138,20 @@ body {
 
 .media-carousel {
   display: flex;
+  justify-content: center;
   flex-direction: row;
-  gap: 5px;
   margin: auto;
-  width: 50%;
-  height: 780px;
+  width: fit-content;
+  height: auto;
   top: 100px;
-  /* overflow: hidden; */
+  position: relative;
+  overflow: hidden;
 }
 
 .songs {
   position: relative;
-  /* width: max-content; */
-  top: 5px;
-  /* overflow: hidden; */
+  width: 700px;
+  height: 750px;
 }
 
 .songs li {
@@ -160,36 +160,34 @@ body {
   top: 0;
   left: 0;
   font-size: 30px;
-  width: 750px;
-  height: 750px;
+  width: 700px;
+  height: 700px;
   margin: 0;
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .songs li img {
-  width: 710px;
-  height: 710px;
+  width: 700px;
+  height: 700px;
   border-radius: 30px;
 }
 
 .songs li p {
-	width: 710px;
-	height: 710px;
-	border-radius: 30px;
-	font-size: 20px;
-	margin-top: 0px;
-  }
+  font-size: 20px;
+  margin-top: 0px;
+}
 
 .actions {
   display: flex;
-  position: absolute;
   flex-direction: column;
   height: 100%;
-  left: 98%;
-  top: 5px;
+  margin-left: 5px; /* Keeps a constant 5px gap from the songs */
+  position: relative;
 }
 
-button {
+.action-btn {
   outline: none;
   border: none;
   font-size: 50px;
@@ -197,6 +195,6 @@ button {
   cursor: pointer;
 }
 
-button i {
+.action-btn i {
   color: white;
 }

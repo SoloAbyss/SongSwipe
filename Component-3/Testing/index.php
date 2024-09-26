@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
-<body>
+<body id="home">
     <div class="navbar">
         <div class="logo">
             <img href="php/logout.php" src="Assets/SongSwipe logo.svg" alt="navbar logo">
@@ -83,7 +83,7 @@
             </div>
         </div>
         <div class="links">
-            <a href="#myfinds">My Finds<img class="my-finds-icon" src="Assets/My Finds icon.svg" alt="My Finds icon"></a>
+            <a href="myfinds.php">My Finds<img class="my-finds-icon" src="Assets/My Finds icon.svg" alt="My Finds icon"></a>
             <div class="divider"></div>
             <a href="profile.php"><img class="profile-icon" src="Assets/Profile Icon.svg" alt="Profile icon"></a> 
         </div>
@@ -92,25 +92,26 @@
    
     <div class="media-carousel">
         <ul class="songs">
-            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
-            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
-            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
-            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
-            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
-            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
-            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
-            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
-            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
-            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
-            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
-            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
-            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
-            <li><img src="Assets/landscape-placeholder.svg" alt="landscape-placeholder"></li>
+            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Buddy Holly<p>Weezer</p></li>
+            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
+            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
+            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
+            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
+            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
+            <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
             <li><img src="Assets/Weezer blue albumb.jpg" alt="landscape-placeholder">Test Song<p>Weezer</p></li>
         </ul>
         <div class="actions">
-            <button class="prev"><i class="fa-solid fa-circle-up"></i></button>
-            <button class="next"><i class="fa-solid fa-circle-down"></i></button>
+            <div class="top">
+                <button class="action-btn prev"><i class="fa-solid fa-circle-arrow-up"></i></button>
+                <button class="action-btn next"><i class="fa-solid fa-circle-arrow-down"></i></button>
+            </div>        
+            <div class="bottom">
+                <button class="action-btn"><i class="fa-regular fa-heart"></i></button>
+                <button class="action-btn"><i class="fa-solid fa-heart-crack"></i></button>
+                <button class="action-btn"><i class="fa-solid fa-plus"></i></button>
+            </div>
+
         </div>
     </div>
     <div class="drag-proxy"></div>
