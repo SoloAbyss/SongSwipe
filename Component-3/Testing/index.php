@@ -93,8 +93,8 @@
     <div class="media-carousel">
         <ul class="songs">
             <li><img src="Assets/Weezer album.jpg" alt="Album art">Buddy Holly<p>Weezer</p></li>
-            <li><img src="Assets/Weezer album.jpg" alt="Album art">Test Song<p>Weezer</p></li>
-            <li><img src="Assets/Weezer album.jpg" alt="Album art">Test Song<p>Weezer</p></li>
+            <li><img src="Assets/Creep.jpeg" alt="Album art">Creep<p>Radiohead</p></li>
+            <li><img src="Assets/Walking On A Dream.jpeg" alt="Album art">Walking On A Dream<p>Empire Of The Sun</p></li>
             <li><img src="Assets/Weezer album.jpg" alt="Album art">Test Song<p>Weezer</p></li>
             <li><img src="Assets/Weezer album.jpg" alt="Album art">Test Song<p>Weezer</p></li>
             <li><img src="Assets/Weezer album.jpg" alt="Album art">Test Song<p>Weezer</p></li>

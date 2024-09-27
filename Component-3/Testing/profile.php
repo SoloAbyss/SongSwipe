@@ -46,24 +46,22 @@ while ($result = mysqli_fetch_assoc($query)) {
     <div class="profile-container">
         <div class="profile-nav">
             <ul>
-                <div class="profile-link nav-link active" data-target="profile">
+                <div class="profile-link active" data-target="profile">
                     <img class="profile-pic" src="Assets/profile.png" alt="Profile Photo" />
-                    <ul>
-                        <li class="name"><b><?php echo $res_Name ?></b></li>
-                        <li class="username">@<b><?php echo $res_Uname ?></b></li>
-                    </ul>
+                    <li class="name"><b><?php echo $res_Name ?></b></li>
+                    <li class="username">@<b><?php echo $res_Uname ?></b></li>
                 </div>
-                <li class="nav-link" data-target="get-pro"><i class="fa-solid fa-bolt" style="color: #ffaa01;"></i>Get Pro</li>
-                <li class="nav-link" data-target="history"><i class="fa-solid fa-clock-rotate-left"></i>History</li>
-                <li class="nav-link" data-target="my-details"><i class="fa-regular fa-pen-to-square"></i>My Details</li>
-                <li class="nav-link" data-target="settings"><i class="fa-solid fa-gear"></i>Settings</li>
+                <li data-target="get-pro"><i class="fa-solid fa-bolt" style="color: #ffaa01;"></i>Get Pro</li>
+                <li data-target="history"><i class="fa-solid fa-clock-rotate-left"></i>History</li>
+                <li data-target="my-details"><i class="fa-regular fa-pen-to-square"></i>My Details</li>
+                <li data-target="settings"><i class="fa-solid fa-gear"></i>Settings</li>
                 <li>
                     <a href="php/logout.php"><button class="logout">Log Out</button></a>
                 </li>
             </ul>
         </div>
 
-        <div class="content-area">
+        <div class="profile-details">
             <div id="profile" class="content-section active">
                 <h1>Profile</h1>
                 <p>Upgrade to Pro to access premium features.</p>

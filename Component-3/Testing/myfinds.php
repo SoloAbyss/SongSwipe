@@ -38,7 +38,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -50,7 +50,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -62,7 +62,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -74,7 +74,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -86,7 +86,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -98,7 +98,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -110,7 +110,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -122,7 +122,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -134,7 +134,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -146,7 +146,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -158,7 +158,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -170,7 +170,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -182,7 +182,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -194,7 +194,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -206,7 +206,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -218,7 +218,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -230,7 +230,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -242,7 +242,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -254,7 +254,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -266,7 +266,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -278,7 +278,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
@@ -290,7 +290,7 @@
             </tr>
             <tr>
                 <td class="title">
-                    <img src="Assets/Weezer blue albumb.jpg" alt="album cover">
+                    <img src="Assets/Weezer album.jpg" alt="album cover">
                     <ul>
                         <h2>Buddy Holly</h2>
                         <p>Weezer</p>
