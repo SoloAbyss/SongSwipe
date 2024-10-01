@@ -46,17 +46,18 @@ while ($result = mysqli_fetch_assoc($query)) {
     <div class="profile-container">
         <div class="profile-nav">
             <ul>
-                <div class="profile-link active" data-target="profile">
-                    <img class="profile-pic" src="Assets/profile.png" alt="Profile Photo" />
+                <div class="profile-link nav-link active" data-target="profile">
+                <img class="profile-pic" src="Assets/profile.png" alt="Profile Photo" />
+                <ul>
                     <li class="name"><b><?php echo $res_Name ?></b></li>
                     <li class="username">@<b><?php echo $res_Uname ?></b></li>
+                </ul>
                 </div>
-                <li data-target="get-pro"><i class="fa-solid fa-bolt" style="color: #ffaa01;"></i>Get Pro</li>
-                <li data-target="history"><i class="fa-solid fa-clock-rotate-left"></i>History</li>
-                <li data-target="my-details"><i class="fa-regular fa-pen-to-square"></i>My Details</li>
-                <li data-target="settings"><i class="fa-solid fa-gear"></i>Settings</li>
-                <li>
-                    <a href="php/logout.php"><button class="logout">Log Out</button></a>
+                <li class="nav-link" data-target="get-pro"><i class="fa-solid fa-bolt" style="color: #ffaa01;"></i>Get Pro</li>
+                <li class="nav-link" data-target="history"><i class="fa-solid fa-clock-rotate-left"></i>History</li>
+                <li class="nav-link" data-target="my-details"><i class="fa-regular fa-pen-to-square"></i>My Details</li>
+                <li class="nav-link" data-target="settings"><i class="fa-solid fa-gear"></i>Settings</li>                <li>
+                    <a href="php/logout.php"><button class="logout"><i class="fa-solid fa-right-from-bracket"></i>Log Out</button></a>
                 </li>
             </ul>
         </div>

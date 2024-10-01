@@ -169,14 +169,13 @@ body {
 /* ----Home---- */
 
 .media-carousel {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-55%, -50%);
   display: flex;
-  justify-content: center;
-  flex-direction: row;
-  margin: auto;
   width: fit-content;
   height: max-content;
-  top: 120px;
-  position: relative;
   overflow: hidden;
 }
 
@@ -245,24 +244,20 @@ body {
   font-size: 50px;
   background: none;
   cursor: pointer;
+  transition: transform 0.09s ease-in-out; /* Transition on the button */
+}
+
+.action-btn:active {
+  transform: scale(0.8); /* Scale the button down */
 }
 
 .action-btn i {
   color: white;
 }
 
-.action-btn {
+.action-btn:focus {
   outline: none;
-  border: none;
-  font-size: 50px;
-  background: none;
-  cursor: pointer;
 }
-
-.action-btn i {
-  color: white;
-}
-
 
 /* ----Login System---- */
 
@@ -413,7 +408,7 @@ body {
 .profile-nav {
   background-color: rgb(255, 255, 255, 0.2);
   color: white;
-  height: max-content;
+  height: fit-content;
   border-radius: 20px;
   border: 4px solid rgb(255, 255, 255, 0.2);
   padding: 20px 40px;
@@ -428,6 +423,12 @@ body {
   align-items: center;
   height: 60px;
   padding: 0px 20px;
+}
+
+.profile-link ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .profile-pic {
@@ -449,7 +450,7 @@ body {
   margin: 0;
 }
 
-.profile-nav .nav-link {
+.nav-link {
   height: fit-content;
   padding: 5px 10px;
   align-content: center;
@@ -461,15 +462,15 @@ body {
   border: 4px solid rgb(255, 255, 255, 0);
 }
 
-.nav-link i {
+.nav-link i, .logout i {
   margin-right: 10px;
 }
 
-.profile-nav .nav-link:hover {
+.nav-link:hover {
   background-color: rgb(255, 255, 255, 0.2);
 }
 
-.profile-nav .nav-link.active {
+.nav-link.active {
   background-color: rgb(255, 255, 255, 0.1);
   border: 4px solid rgb(255, 255, 255, 0.1);
 }
@@ -478,19 +479,23 @@ body {
   background-color: rgba(255, 0, 0, 0.4);
   color: white;
   border: 4px solid rgb(255, 255, 255, 0.1);
-  padding: 5px 15px;
+  padding: 5px 10px;
   border-radius: 14pt;
   cursor: pointer;
   font-size: 20pt;
   transition: all 0.3s ease;
+  text-align: left;
+  margin-top: 15px;
 }
+
+
 
 .logout:hover {
   background-color: rgba(255, 0, 0, 0.6);
   border: 4px solid rgb(255, 255, 255, 0.1);
 }
 
-.content-area {
+.profile-details {
   flex-grow: 1;
   padding: 20px;
   background-color: rgb(255, 255, 255, 0.2);
