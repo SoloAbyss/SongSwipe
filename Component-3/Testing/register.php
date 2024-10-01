@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <title>Register</title>
+    <title>SongSwipe | Register</title>
 </head>
 <body>
       <div class="login-container">
@@ -49,13 +49,13 @@
             <header>Sign Up</header>
             <form action="" method="post">
                 <div class="field input">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username" autocomplete="off" required>
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" autocomplete="off" required>
                 </div>
 
                 <div class="field input">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" id="email" autocomplete="off" required>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" autocomplete="off" required>
                 </div>
 
                 <div class="field input">
