@@ -7,9 +7,9 @@
 > This is only a **visual representation** of the real service at this point in time. **There is no functionality.** *Could be coming in the future*
 
 SongSwipe is a web-based application designed to help users discover new music. The site offers an interactive experience where users can explore songs, swipe through different music recommendations, and easily find tracks they’ve never heard before. This school project aims to create a simple yet engaging way to broaden musical tastes and introduce users to fresh and exciting muisc.
-## How to run the website.
+# How to run the website.
 
-### XAMPP
+## **1a.** XAMPP
 1. Install ***XAMPP*** from here (if you use Mac install *'OS X'* version *'8.2.4'*): https://www.apachefriends.org/download.html
 >*If you use Mac you will need to go to **system settings > privacy & security.** Scroll down to the **"security"** section and you'll see the blocked app. Lastly lick the open **"Open Anyway"** option.*
 2. Open ***'XAMPP Control Panel'***.
@@ -20,7 +20,7 @@ SongSwipe is a web-based application designed to help users discover new music. 
 7. Copy and paste the *'SYL'*** script from the ***'syl'*** folder.
 7. Click ***Go***
 
-### File structure
+## **1b.** File structure
 1. Open your **"XAMPP"** installation (Ususally in **"C:\"**)
 2. Open the **"htdocs"** folder.
 3. Create a folder called **"songswipe"**
