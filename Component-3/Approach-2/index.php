@@ -118,8 +118,8 @@
         </ul>
         <div class="actions">
             <div class="top">
-                <button class="action-btn prev"><i class="fa-solid fa-circle-arrow-up"></i></button>
-                <button class="action-btn next"><i class="fa-solid fa-circle-arrow-down"></i></button>
+                <button class="action-btn prev"><i class="fa-solid fa-circle-arrow-left"></i></button>
+                <button class="action-btn next"><i class="fa-solid fa-circle-arrow-right"></i></button>
             </div>
             <div class="bottom">
                 <button class="action-btn interaction"><i id="interaction-icon" class="fa-regular fa-heart"></i></button>
@@ -133,7 +133,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
     <script src="script.js"></script>
 </body>
 
