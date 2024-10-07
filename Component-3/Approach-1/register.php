@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <title>Register</title>
+    <title>SongSwipe | Create Account</title>
 </head>
 <body>
       <div class="login-container">
@@ -32,7 +32,7 @@
          }
          else{
 
-            mysqli_query($con,"INSERT INTO users(Username,Email,Name,Password) VALUES('$username','$email','$name','$password')") or die("Erroe Occured");
+            mysqli_query($con,"INSERT INTO users(Username,Email,Name,Password) VALUES('$username','$email','$name','$password')") or die("Error Occured");
 
             echo "<div class='message'>
                       <p>Registration successful!</p>
@@ -60,7 +60,7 @@
 
                 <div class="field input">
                     <label for="age">Full Name</label>
-                    <input type="text" name="name" id="name" autocomplete="off" required>
+                    <input type="text" name="name" id="name" autocomplete="off" >
                 </div>
                 <div class="field input">
                     <label for="password">Password</label>
