@@ -15,13 +15,13 @@ session_start();
 <body>
     <div class="navbar">
         <div class="logo">
-            <a href="index.php"><img href="index.html" src="Assets/SongSwipe logo.svg" alt="navbar logo" /></a>
+            <a href="index.php"><img src="Assets/SongSwipe logo.svg" alt="navbar logo" /></a>
         </div>
         <div class="links">
-            <a href="#myfinds">My Finds<img class="my-finds-icon-p" src="Assets/My Finds icon.svg"
+            <a href="myfinds.php">My Finds<img class="my-finds-icon-p" src="Assets/My Finds icon.svg"
                     alt="My Finds icon" /></a>
             <div class="divider"></div>
-            <a href="#profile">Profile<img class="profile-icon-p" src="Assets/Profile Icon.svg"
+            <a href="profile.php">Profile<img class="profile-icon-p" src="Assets/Profile Icon.svg"
                     alt="Profile icon" /></a>
         </div>
     </div>

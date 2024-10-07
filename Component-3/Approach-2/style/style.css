@@ -672,6 +672,10 @@ body {
   border-radius: 20px;
 }
 
+.favourite__slider--favourite ul{
+  width: 120px;
+}
+
 .pro-container {
   display: flex;
   flex-direction: column;

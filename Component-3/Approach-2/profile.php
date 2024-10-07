@@ -92,9 +92,23 @@ while ($result = mysqli_fetch_assoc($query)) {
                     <div class="favourite__slider--inner">
                         <div class="favourite__slider--favourite">
                             <ul>
-                                <img src="Assets/Album covers/Weezer album.jpg" alt="badge">
-                                <h1 class="heading3">Buddy Holly</h1>
-                                <p class="subheading2">Weezer</p>
+                                <img src="Assets/Album covers/fighting-my-demons.jpg" alt="badge">
+                                <h1 class="heading3">Fighting My Demons</h1>
+                                <p class="subheading2">Ken Carson</p>
+                            </ul>
+                        </div>
+                        <div class="favourite__slider--favourite">
+                            <ul>
+                                <img src="Assets/Album covers/Timeless.jpg" alt="badge">
+                                <h1 class="heading3">Timeless</h1>
+                                <p class="subheading2">The Weeknd & Playboi Carti</p>
+                            </ul>
+                        </div>
+                        <div class="favourite__slider--favourite">
+                            <ul>
+                                <img src="Assets/Album covers/wonderwall.jpg" alt="badge">
+                                <h1 class="heading3">Wonderwall</h1>
+                                <p class="subheading2">Oasis</p>
                             </ul>
                         </div>
                         <div class="favourite__slider--favourite">
@@ -106,72 +120,37 @@ while ($result = mysqli_fetch_assoc($query)) {
                         </div>
                         <div class="favourite__slider--favourite">
                             <ul>
-                                <img src="Assets/Album covers/Weezer album.jpg" alt="badge">
-                                <h1 class="heading3">Buddy Holly</h1>
-                                <p class="subheading2">Weezer</p>
+                                <img src="Assets/Album covers/Blind.jpg" alt="badge">
+                                <h1 class="heading3">Blind</h1>
+                                <p class="subheading2">Korn</p>
                             </ul>
                         </div>
                         <div class="favourite__slider--favourite">
                             <ul>
-                                <img src="Assets/Album covers/Weezer album.jpg" alt="badge">
-                                <h1 class="heading3">Buddy Holly</h1>
-                                <p class="subheading2">Weezer</p>
+                                <img src="Assets/Album covers/Creep.jpeg" alt="badge">
+                                <h1 class="heading3">Creep</h1>
+                                <p class="subheading2">Radiohead</p>
                             </ul>
                         </div>
                         <div class="favourite__slider--favourite">
                             <ul>
-                                <img src="Assets/Album covers/Weezer album.jpg" alt="badge">
-                                <h1 class="heading3">Buddy Holly</h1>
-                                <p class="subheading2">Weezer</p>
+                                <img src="Assets/Album covers/in-da-club.jpg" alt="badge">
+                                <h1 class="heading3">In Da Club</h1>
+                                <p class="subheading2">50 Cent</p>
                             </ul>
                         </div>
                         <div class="favourite__slider--favourite">
                             <ul>
-                                <img src="Assets/Album covers/Weezer album.jpg" alt="badge">
-                                <h1 class="heading3">Buddy Holly</h1>
-                                <p class="subheading2">Weezer</p>
+                                <img src="Assets/Album covers/nights-like-this.jpg" alt="badge">
+                                <h1 class="heading3">Nights Like This</h1>
+                                <p class="subheading2">The Kid LAROI</p>
                             </ul>
                         </div>
                         <div class="favourite__slider--favourite">
                             <ul>
-                                <img src="Assets/Album covers/Weezer album.jpg" alt="badge">
-                                <h1 class="heading3">Buddy Holly</h1>
-                                <p class="subheading2">Weezer</p>
-                            </ul>
-                        </div>
-                        <div class="favourite__slider--favourite">
-                            <ul>
-                                <img src="Assets/Album covers/Weezer album.jpg" alt="badge">
-                                <h1 class="heading3">Buddy Holly</h1>
-                                <p class="subheading2">Weezer</p>
-                            </ul>
-                        </div>
-                        <div class="favourite__slider--favourite">
-                            <ul>
-                                <img src="Assets/Album covers/Weezer album.jpg" alt="badge">
-                                <h1 class="heading3">Buddy Holly</h1>
-                                <p class="subheading2">Weezer</p>
-                            </ul>
-                        </div>
-                        <div class="favourite__slider--favourite">
-                            <ul>
-                                <img src="Assets/Album covers/Weezer album.jpg" alt="badge">
-                                <h1 class="heading3">Buddy Holly</h1>
-                                <p class="subheading2">Weezer</p>
-                            </ul>
-                        </div>
-                        <div class="favourite__slider--favourite">
-                            <ul>
-                                <img src="Assets/Album covers/Weezer album.jpg" alt="badge">
-                                <h1 class="heading3">Buddy Holly</h1>
-                                <p class="subheading2">Weezer</p>
-                            </ul>
-                        </div>
-                        <div class="favourite__slider--favourite">
-                            <ul>
-                                <img src="Assets/Album covers/Weezer album.jpg" alt="badge">
-                                <h1 class="heading3">Buddy Holly</h1>
-                                <p class="subheading2">Weezer</p>
+                                <img src="Assets/Album covers/hardy-boys.jpg" alt="badge">
+                                <h1 class="heading3">Hardy Boys</h1>
+                                <p class="subheading2">x$ept</p>
                             </ul>
                         </div>
                     </div>
