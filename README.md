@@ -11,7 +11,7 @@ SongSwipe is a web-based application designed to help users discover new music. 
 
 ## **1a.** XAMPP
 1. Install ***XAMPP*** from here (if you use Mac install *'OS X'* version *'8.2.4'*): https://www.apachefriends.org/download.html
->*If you use Mac you will need to go to **system settings > privacy & security.** Scroll down to the **"security"** section and you'll see the blocked app. Lastly lick the open **"Open Anyway"** option.*
+>*If you use Mac you will need to go to **system settings > privacy & security.** Scroll down to the **"security"** section and you'll see the blocked app. Lastly click the open **"Open Anyway"** option.*
 2. Open ***'XAMPP Control Panel'***.
 3. Start the *'Apache'* and *'MySQL'* servers.
 4. Go to ***'http://localhost/phpmyadmin'***
